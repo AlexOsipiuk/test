@@ -8,13 +8,13 @@ public class UsersKart {
     private String valuta;
     private Users users;
 
-   /* public UsersKart(int id_kart,int id_user, String strana, int schot,String valuta) {
+    public UsersKart(int id_kart,int id_user, String strana, int schot,String valuta) {
         this.id_kart=id_kart;
         this.id_user=id_user;
         this.strana = strana;
         this.schot=schot;
         this.valuta=valuta;
-    }*/
+    }
 
     public UsersKart(Users users,int id_kart, int id_user, String strana, int schot,String valuta) {
         this.users = users;

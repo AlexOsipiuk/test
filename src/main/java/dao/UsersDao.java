@@ -96,11 +96,12 @@ public class UsersDao implements IntUsersDao {
             preparedStatement.setInt(1, id);
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                int id_user = resultSet.getInt("id_user");
+                String name = resultSet.getString("name");
+                id = resultSet.getInt("id");
                 String strana = resultSet.getString("strana");
                 int schot = resultSet.getInt("schot");
                 String valuta = resultSet.getString("valuta");
-                bank_karts.add(new UsersKart(id_user, strana, schot, valuta));
+                bank_karts.add(new UsersKart(name, strana, schot, valuta));
             }
         } catch (SQLException ex) {
             System.err.println("Error entry information");
@@ -163,7 +164,6 @@ public class UsersDao implements IntUsersDao {
                 String email=resultSet.getString("email");
                 users=new Users(id,name,surname,birthdate,email);
             }
-
         }
         catch (SQLException ex){
             System.out.println("Error getting record");
@@ -189,14 +189,13 @@ public class UsersDao implements IntUsersDao {
             resultSet=preparedStatement.executeQuery();
             while (resultSet.next()) {
                 int id=resultSet.getInt("id");
-                String writer=resultSet.getString("name");
+                name=resultSet.getString("name");
                 String surname=resultSet.getString("surname");
                 int birthdate=resultSet.getInt("birthdate");
                 String email=resultSet.getString("email");
                 users=new Users(id,name,surname,birthdate,email);
 
             }
-
         }
         catch (SQLException ex){
             System.out.println("Error getting record");

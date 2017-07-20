@@ -1,25 +1,34 @@
 package model;
 
 public class UsersKart {
-    private int id_kart;
-    private int id_user;
+    private int idkart;
+    private int iduser;
     private String strana;
     private int schot;
     private String valuta;
     private Users users;
 
     public UsersKart(int id_kart,int id_user, String strana, int schot,String valuta) {
-        this.id_kart=id_kart;
-        this.id_user=id_user;
+        this.idkart=id_kart;
+        this.iduser=id_user;
         this.strana = strana;
         this.schot=schot;
         this.valuta=valuta;
     }
 
+
     public UsersKart(Users users,int id_kart, int id_user, String strana, int schot,String valuta) {
         this.users = users;
-        this.id_kart=id_kart;
-        this.id_user=id_user;
+        this.idkart=id_kart;
+        this.iduser=id_user;
+        this.strana = strana;
+        this.schot=schot;
+        this.valuta=valuta;
+    }
+
+    public UsersKart(int id_kart,String strana,int schot,String valuta, int id_user) {
+        this.idkart=id_kart;
+        this.iduser=id_user;
         this.strana = strana;
         this.schot=schot;
         this.valuta=valuta;
@@ -28,19 +37,19 @@ public class UsersKart {
     public UsersKart(String userName, String strana, int schot, String valuta) {}
 
     public int getId_kart() {
-        return id_kart;
+        return idkart;
     }
 
     public void setId_kart(int id_kart) {
-        this.id_kart = id_kart;
+        this.idkart = id_kart;
     }
 
     public int getId_user() {
-        return id_user;
+        return iduser;
     }
 
     public void setId_user(int id_user) {
-        this.id_user = id_user;
+        this.iduser = id_user;
     }
 
     public String getStrana() {

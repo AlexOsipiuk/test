@@ -10,7 +10,7 @@ public class Users {
     private String email;
     private ArrayList<UsersKart> usersKartList;
 
-    //public Users() {}
+    public Users() {}
 
     public Users(int id, String name, String surname, int birthdate, String email) {
         this.id = id;

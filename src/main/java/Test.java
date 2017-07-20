@@ -1,9 +1,8 @@
-import config.ConnectionDB;
 import dao.UsersDao;
 import dao.UsersKartDao;
 import model.Users;
 import model.UsersKart;
-import java.util.ArrayList;
+
 import java.util.List;
 
 import static config.ConnectionDB.closeConnection;
@@ -11,16 +10,14 @@ import static config.ConnectionDB.closeConnection;
 public class Test {
     public static void main(String[] args){
 
-
+        StringBuilder stringBuilder=new StringBuilder();
         UsersDao impl= new UsersDao() {
             @Override
-            public void insert(UsersKart model) {
-
+            public void insert(Users model) {
             }
 
             @Override
             public void update(UsersKart model) {
-
             }
 
             @Override
@@ -33,24 +30,14 @@ public class Test {
                 return null;
             }
         };
-        UsersKartDao usersKartDao= new UsersKartDao() {
-            @Override
-            public UsersKart getModelById(Integer id) {
-                return null;
-            }
 
-            @Override
-            public List<UsersKart> getAllUsersKartByUserName(String name) {
-                return null;
-            }
 
-            @Override
-            public List<UsersKart> getUsersKartById_user(int id_user) {
-                return null;
-            }
-        };
-        StringBuilder stringBuilder=new StringBuilder();
+        List<UsersKart> usersKarts=impl.getAllModel();
 
+        for(UsersKart usersKart:usersKarts){
+                UsersKart users= impl.getModelById(2);
+        stringBuilder.append(users.getId()+". Name: "+users.getName()+"; Surname: "+users.getSurname()+"; Birthdate: "+users.getBirthdate()+"; Email: "+users.getEmail());
+        System.out.println(stringBuilder);
 
 
         closeConnection();

@@ -5,7 +5,6 @@ import model.UsersKart;
 import java.util.List;
 
 public interface IntUsersKartDao extends IntGenericDao<UsersKart,Integer> {
-    List<UsersKart> getAllUsersKartByUserName(String name);
 
     List<UsersKart> getUsersKartById_user(int id_user);
 

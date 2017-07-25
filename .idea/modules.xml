@@ -3,6 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/comintelisoftapi.iml" filepath="$PROJECT_DIR$/comintelisoftapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/connect/connect.iml" filepath="$PROJECT_DIR$/connect/connect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dao/dao.iml" filepath="$PROJECT_DIR$/dao/dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/entity/entity.iml" filepath="$PROJECT_DIR$/entity/entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/runner/runner.iml" filepath="$PROJECT_DIR$/runner/runner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servise/servise.iml" filepath="$PROJECT_DIR$/servise/servise.iml" />
     </modules>
   </component>
 </project>

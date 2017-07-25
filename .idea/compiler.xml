@@ -6,11 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="comintelisoftapi" />
+        <module name="connect" />
+        <module name="dao" />
+        <module name="entity" />
+        <module name="runner" />
+        <module name="servise" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="bank" target="1.7" />
       <module name="comintelisoftapi" target="1.7" />
+      <module name="connect" target="1.7" />
+      <module name="dao" target="1.7" />
+      <module name="entity" target="1.7" />
+      <module name="runner" target="1.7" />
+      <module name="servise" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
